@@ -1,0 +1,13 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+.body{
+    font-family: 'Josefin Sans', sans-serif;
+    /* Background pattern from Toptal Subtle Patterns */
+    background-image: url(../images/checkerboard-cross.png);
+    background-repeat: repeat;
+}
