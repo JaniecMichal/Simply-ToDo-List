@@ -12,10 +12,39 @@
         crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/mainStyle.css" />
+    <link rel="stylesheet" href="css/Container.css" />
+    <link rel="stylesheet" href="css/Header.css" />
+    <link rel="stylesheet" href="css/TaskAddingPanel.css" />
     <script defer src="js/MainScript.js"></script>
 </head>
 
 <body class="body">
+
+
+    <div class="Container">
+        <header class="Header">
+            <h1 class="Header__title">ToDO list by {Imperator}</h1>
+        </header>
+        <main>
+
+            <section class="TaskAddingPanel">
+
+                <header class="TaskAddingPanel__Header">
+                    <h2 class="TaskAddingPanel__headerTitle">Co mamy do zrobienia?</h2>
+                </header>
+
+                <form class="TaskAddingPanel_Form js-form">
+                    <input id="AddTaskInput" class="TaskAddingPanel_Input"
+                        placeholder="Wpisz zadanie do wykonania"><button for="AddTaskInput"
+                        class="TaskAddingPanel__AddTaskButton js-addNewTask">Dodaj zadanie</button>
+                </form>
+
+            </section>
+    </div>
+
+    </main>
+
+
 
 </body>
 

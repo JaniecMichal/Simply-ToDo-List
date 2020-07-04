@@ -1,0 +1,46 @@
+.TaskAddingPanel {
+    min-width: 800px;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid #555;
+    box-shadow: 2px 2px 4px 3px #999;
+}
+
+.TaskAddingPanel__Header {
+    border-bottom: 2px solid #555;
+    margin-bottom: 40px;
+}
+
+.TaskAddingPanel__headerTitle {
+    font-weight: 400;
+}
+
+.TaskAddingPanel_Form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.TaskAddingPanel_Input {
+    padding: 10px;
+    flex-basis: 500px;
+    text-transform: uppercase;
+    border: 2px solid #555;
+}
+
+.TaskAddingPanel__AddTaskButton {
+    flex-basis: 200px;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: 2px solid #555;
+}
+
+.TaskAddingPanel__AddTaskButton:hover {
+    background-color: hsl(180, 100%, 33%);
+    color: black;
+    cursor: pointer;
+    border-color: #222;
+}

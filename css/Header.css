@@ -1,0 +1,8 @@
+.Header{
+    padding:5px;
+    min-width: 100%;
+    text-align: center;
+}
+.Header__title{
+    font-weight: 700;
+}

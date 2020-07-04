@@ -10,4 +10,8 @@ html {
     /* Background pattern from Toptal Subtle Patterns */
     background-image: url(../images/checkerboard-cross.png);
     background-repeat: repeat;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
 }
