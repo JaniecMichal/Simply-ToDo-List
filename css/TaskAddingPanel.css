@@ -1,5 +1,4 @@
 .TaskAddingPanel {
-    min-width: 800px;
     padding: 30px;
     background-color: white;
     border: 2px solid #555;
@@ -20,18 +19,20 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
 }
 
 .TaskAddingPanel_Input {
     padding: 10px;
-    flex-basis: 500px;
+    flex-basis: 75%;
+    flex-grow: 1;
     text-transform: uppercase;
     border: 2px solid #555;
 }
 
 .TaskAddingPanel__AddTaskButton {
-    flex-basis: 200px;
+    margin-left: 5px;
+    flex-basis: 20%;
+    flex-grow: 1;
     background-color: teal;
     color: white;
     padding: 10px;
@@ -43,4 +44,8 @@
     color: black;
     cursor: pointer;
     border-color: #222;
+}
+
+.TaskAddingPanel__AddTaskButton:active {
+    background-color: hsl(180, 100%, 43%);
 }

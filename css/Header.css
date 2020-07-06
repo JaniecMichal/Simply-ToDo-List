@@ -1,9 +1,10 @@
 .Header {
     padding: 5px;
-    flex-basis: 100%;
+    max-width: 100%;
     text-align: center;
 }
 
 .Header__title {
     font-weight: 700;
+    font-size: 45px;
 }
