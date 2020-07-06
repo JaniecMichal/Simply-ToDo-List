@@ -15,34 +15,69 @@
     <link rel="stylesheet" href="css/Container.css" />
     <link rel="stylesheet" href="css/Header.css" />
     <link rel="stylesheet" href="css/TaskAddingPanel.css" />
+    <link rel="stylesheet" href="css/TaskListToDo.css" />
     <script defer src="js/MainScript.js"></script>
 </head>
 
 <body class="body">
 
 
-    <div class="Container">
+    <main class="Container">
         <header class="Header">
             <h1 class="Header__title">ToDO list by {Imperator}</h1>
         </header>
-        <main>
 
-            <section class="TaskAddingPanel">
+        <section class="TaskAddingPanel">
 
-                <header class="TaskAddingPanel__Header">
-                    <h2 class="TaskAddingPanel__headerTitle">Co mamy do zrobienia?</h2>
-                </header>
+            <header class="TaskAddingPanel__Header">
+                <h2 class="TaskAddingPanel__headerTitle">Co mamy do zrobienia?</h2>
+            </header>
 
-                <form class="TaskAddingPanel_Form js-form">
-                    <input id="AddTaskInput" class="TaskAddingPanel_Input"
-                        placeholder="Wpisz zadanie do wykonania"><button for="AddTaskInput"
-                        class="TaskAddingPanel__AddTaskButton js-addNewTask">Dodaj zadanie</button>
-                </form>
+            <form class="TaskAddingPanel_Form js-form">
+                <input id="AddTaskInput" class="TaskAddingPanel_Input" placeholder="Wpisz zadanie do wykonania"><button
+                    for="AddTaskInput" class="TaskAddingPanel__AddTaskButton js-addNewTask">Dodaj zadanie</button>
+            </form>
 
-            </section>
-    </div>
+        </section>
 
+        <section class="TaskListToDoPanel">
+
+            <header class="TaskListToDoPanel__Header">
+                <h2 class="TaskListToDoPanel__headerTitle">Lista zadań do zrobienia</h2>
+            </header>
+
+            <ul class="TaskListToDoPanel__TaskList">
+                <button class="TaskListToDoPanel__Button">✓</button>
+                <li class="TaskListToDoPanel__Task">Obejrzeć film Misja</li><button
+                    class="TaskListToDoPanel__Button TaskListToDoPanel__Button--remove">Usuń</button>
+                <button class="TaskListToDoPanel__Button">✓</button>
+                <li class="TaskListToDoPanel__Task">Zrobić zadanie domowe</li><button
+                    class="TaskListToDoPanel__Button TaskListToDoPanel__Button--remove">Usuń</button>
+                <button class="TaskListToDoPanel__Button">✓</button>
+                <li class="TaskListToDoPanel__Task">Pograć w World of Tanks</li><button
+                    class="TaskListToDoPanel__Button TaskListToDoPanel__Button--remove">Usuń</button>
+                <button class="TaskListToDoPanel__Button">✓</button>
+                <li class="TaskListToDoPanel__Task">Pobawi się z Dominikiem</li><button
+                    class="TaskListToDoPanel__Button TaskListToDoPanel__Button--remove">Usuń</button> <button
+                    class="TaskListToDoPanel__Button">✓</button>
+                <li class="TaskListToDoPanel__Task">Obejrzeć film Misja</li><button
+                    class="TaskListToDoPanel__Button TaskListToDoPanel__Button--remove">Usuń</button>
+                <button class="TaskListToDoPanel__Button">✓</button>
+                <li class="TaskListToDoPanel__Task">Zrobić zadanie domowe</li><button
+                    class="TaskListToDoPanel__Button TaskListToDoPanel__Button--remove">Usuń</button>
+                <button class="TaskListToDoPanel__Button">✓</button>
+                <li class="TaskListToDoPanel__Task">Pograć w World of Tanks</li><button
+                    class="TaskListToDoPanel__Button TaskListToDoPanel__Button--remove">Usuń</button>
+                <button class="TaskListToDoPanel__Button">✓</button>
+                <li class="TaskListToDoPanel__Task">Pobawi się z Dominikiem</li><button
+                    class="TaskListToDoPanel__Button TaskListToDoPanel__Button--remove">Usuń</button>
+            </ul>
+
+
+        </section>
     </main>
+
+
 
 
 

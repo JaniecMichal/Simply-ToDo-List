@@ -1,0 +1,52 @@
+.TaskListToDoPanel {
+    padding: 30px;
+    background-color: white;
+    border: 2px solid #555;
+    box-shadow: 2px 2px 4px 3px #999;
+}
+
+.TaskListToDoPanel__Header {
+    border-bottom: 2px solid #555;
+    margin-bottom: 40px;
+}
+
+.TaskListToDoPanel__headerTitle {
+    font-weight: 400;
+}
+
+.TaskListToDoPanel__TaskList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.TaskListToDoPanel__Task {
+    flex-basis: 510px;
+    list-style-type: none;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.TaskListToDoPanel__Button {
+    flex-basis: 60px;
+    background-color: #008000;
+    border: 2px solid #555;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.TaskListToDoPanel__Button:hover {
+    background-color: hsl(120, 100%, 35%);
+    border-color: #222;
+    cursor: pointer;
+}
+
+.TaskListToDoPanel__Button--remove {
+    background-color: darkred;
+}
+
+.TaskListToDoPanel__Button--remove:hover {
+    background-color: hsl(0, 100%, 35%);
+    border-color: #222;
+}

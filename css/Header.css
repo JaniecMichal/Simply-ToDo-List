@@ -1,8 +1,9 @@
-.Header{
-    padding:5px;
-    min-width: 100%;
+.Header {
+    padding: 5px;
+    flex-basis: 100%;
     text-align: center;
 }
-.Header__title{
+
+.Header__title {
     font-weight: 700;
 }
