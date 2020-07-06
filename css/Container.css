@@ -4,6 +4,6 @@
         max-width: 800px;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 100px 1fr 2fr;
+        grid-template-rows: 100px auto 2fr;
         grid-gap: 25px;
     }

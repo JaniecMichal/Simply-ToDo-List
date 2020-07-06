@@ -49,3 +49,16 @@
 .TaskAddingPanel__AddTaskButton:active {
     background-color: hsl(180, 100%, 43%);
 }
+
+@media (max-width:480px) {
+    .TaskAddingPanel_Input {
+        flex-basis: 100%;
+        flex-grow: 1;
+        margin-bottom: 5px;
+    }
+    .TaskAddingPanel__AddTaskButton {
+        margin-left: 0px;
+        flex-basis: auto;
+        flex-grow: 1;
+    }
+}
