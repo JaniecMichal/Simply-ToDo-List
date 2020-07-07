@@ -34,7 +34,12 @@
     margin-left: 10px;
 }
 
+.TaskListToDoPanel__Task--done {
+    text-decoration: line-through;
+}
+
 .TaskListToDoPanel__Button {
+    min-height: 30px;
     flex-basis: 10%;
     background-color: #008000;
     border: 2px solid #555;
@@ -45,6 +50,15 @@
     background-color: hsl(120, 100%, 35%);
     border-color: #222;
     cursor: pointer;
+    background-image: url(../images/checked--small.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.TaskListToDoPanel__Button--done {
+    background-image: url(../images/checked--small.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .TaskListToDoPanel__Button:active {
@@ -53,11 +67,17 @@
 
 .TaskListToDoPanel__Button--remove {
     background-color: darkred;
+    background-image: url(../images/basket.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .TaskListToDoPanel__Button--remove:hover {
     background-color: hsl(0, 100%, 35%);
     border-color: #222;
+    background-image: url(../images/basket.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .TaskListToDoPanel__Button--remove:active {
