@@ -1,8 +1,10 @@
 .TaskListToDoPanel {
+    width: 100%;
     padding: 30px;
     background-color: white;
     border: 2px solid #555;
     box-shadow: 2px 2px 4px 3px #999;
+    margin-bottom: 30px;
 }
 
 .TaskListToDoPanel__Header {
@@ -15,18 +17,21 @@
 }
 
 .TaskListToDoPanel__TaskList {
+    padding-left: 0px;
+}
+
+.TaskListToDoPanel__ListItem {
+    list-style-type: none;
+    border-bottom: 2px solid #555;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 0px;
 }
 
 .TaskListToDoPanel__Task {
-    flex-basis: 70%;
-    list-style-type: none;
-    margin-left: 20px;
-    margin-bottom: 10px;
+    flex-basis: 78%;
+    margin-left: 10px;
 }
 
 .TaskListToDoPanel__Button {
@@ -34,7 +39,6 @@
     background-color: #008000;
     border: 2px solid #555;
     color: white;
-    margin-bottom: 10px;
 }
 
 .TaskListToDoPanel__Button:hover {
@@ -60,20 +64,20 @@
     background-color: hsl(0, 100%, 45%);
 }
 
-@media (max-width:480px) {
+@media (max-width:635px) {
+    .TaskListToDoPanel__ListItem {
+        padding: 20px 0px;
+        border-bottom: 2px solid #555;
+    }
     .TaskListToDoPanel__Task {
-        flex-basis: 100%;
         flex-grow: 1;
-        margin-left: 0px;
         text-align: center;
     }
     .TaskListToDoPanel__Button {
         flex-basis: 100%;
         flex-grow: 1;
-        margin-bottom: 10px;
     }
     .TaskListToDoPanel__Button--remove {
         flex-grow: 1;
-        margin-bottom: 30px;
     }
 }
