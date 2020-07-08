@@ -74,7 +74,7 @@
         const NewTaskContainer = document.querySelector(".TaskAddingPanel_Input").value.trim();
 
         if (NewTaskContainer === "") {
-            taskInputFocus();
+            return taskInputFocus();
         };
         addNewTask(NewTaskContainer);
     };
