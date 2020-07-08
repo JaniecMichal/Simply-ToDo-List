@@ -32,6 +32,7 @@
 .TaskListToDoPanel__Task {
     flex-basis: 78%;
     margin-left: 10px;
+    font-size:20px;
 }
 
 .TaskListToDoPanel__Task--done {
