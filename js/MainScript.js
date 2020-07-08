@@ -1,13 +1,6 @@
 {
     const tasks = [
-        {
-            content: "Obejrzeć film Misja",
-            done: false,
-        },
-        {
-            content: "Pobawić się z Domisiem",
-            done: true,
-        },
+
     ];
 
     const addNewTask = (NewTaskContainer) => {
@@ -16,6 +9,16 @@
             done: false,
         })
         render();
+        taskInputCleaning();
+        taskInputFocus();
+    };
+
+    const taskInputCleaning = () => {
+        document.querySelector(".TaskAddingPanel_Input").value = "";
+    };
+
+    const taskInputFocus = () => {
+        document.querySelector(".TaskAddingPanel_Input").focus();
     };
 
     const removeTask = (taskIndex) => {
@@ -23,12 +26,38 @@
         render();
     };
 
+    const toggleDone = (taskIndex) => {
+        tasks[taskIndex].done = !tasks[taskIndex].done
+        render();
+    };
+
+    const bindsEvents = () => {
+        const RemoveButtons = document.querySelectorAll(".TaskListToDoPanel__Button--remove");
+
+
+        RemoveButtons.forEach((RemoveButton, index) => {
+            RemoveButton.addEventListener("click", () => {
+                removeTask(index);
+            })
+        });
+
+        const ToggleDoneButtons = document.querySelectorAll(".js-doneButton");
+
+
+        ToggleDoneButtons.forEach((ToggleDoneButton, index) => {
+            ToggleDoneButton.addEventListener("click", () => {
+                toggleDone(index);
+            })
+        });
+    };
+
     const render = () => {
         let HTMLstring = "";
 
         for (const task of tasks) {
             HTMLstring += `
-            <li class="TaskListToDoPanel__ListItem"> <button class="TaskListToDoPanel__Button js-doneButton ${task.done ? "TaskListToDoPanel__Button--done" : ""}"></button>
+            <li class="TaskListToDoPanel__ListItem"> <button class="TaskListToDoPanel__Button js-doneButton 
+            ${task.done ? "TaskListToDoPanel__Button--done" : ""}"></button>
             <p class="TaskListToDoPanel__Task ${task.done ? "TaskListToDoPanel__Task--done" : ""}">${task.content}</p><button
                 class="TaskListToDoPanel__Button TaskListToDoPanel__Button--remove"></button>
              </li>
@@ -36,23 +65,7 @@
         }
         document.querySelector(".TaskListToDoPanel__TaskList").innerHTML = HTMLstring;
 
-        const RemoveButtons = document.querySelectorAll(".TaskListToDoPanel__Button--remove");
-
-
-        RemoveButtons.forEach((RemoveButton, index) => {
-            RemoveButton.addEventListener("click", () => {
-                removeTask(index);
-            })
-        });
-
-        const RemoveButtons = document.querySelectorAll(".TaskListToDoPanel__Button--remove");
-
-
-        RemoveButtons.forEach((RemoveButton, index) => {
-            RemoveButton.addEventListener("click", () => {
-                removeTask(index);
-            })
-        });
+        bindsEvents();
 
     };
 
@@ -61,7 +74,7 @@
         const NewTaskContainer = document.querySelector(".TaskAddingPanel_Input").value.trim();
 
         if (NewTaskContainer === "") {
-            return;
+            taskInputFocus();
         };
         addNewTask(NewTaskContainer);
     };

@@ -19,7 +19,7 @@
 .TaskAddingPanel_Form {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -56,14 +56,17 @@
 }
 
 @media (max-width:480px) {
+    .TaskAddingPanel_Form {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
     .TaskAddingPanel_Input {
-        flex-basis: 100%;
-        flex-grow: 1;
-        margin-bottom: 5px;
+        width: 100%;
     }
     .TaskAddingPanel__AddTaskButton {
-        margin-left: 0px;
-        flex-basis: auto;
-        flex-grow: 1;
+        width: 100%;
+        margin-top:10px;
     }
 }
