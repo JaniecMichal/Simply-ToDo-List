@@ -94,13 +94,12 @@
 .taskListToDoPanel__button--additionalAction:hover {
     background-color: hsl(120, 100%, 25%);
     background-image: none;
-
+    
 }
 .taskListToDoPanel__button--additionalAction:active {
     background-color: hsl(120, 100%, 35%);
 }
 
-.taskListToDoPanel__button--hideDone {}
 
 @media (max-width:635px) {
     .taskListToDoPanel__listItem {
