@@ -1,13 +1,16 @@
 {
-    const tasks = [
+    let tasks = [
 
     ];
 
     const addNewTask = (newTaskContainer) => {
-        tasks.push({
-            content: newTaskContainer,
-            done: false,
-        })
+        const updatesTasks = [
+            ...tasks,
+            { content: newTaskContainer, done: false },
+        ];
+
+        tasks = updatesTasks;
+
         render();
         taskInputCleaning();
         taskInputFocus();
@@ -21,8 +24,12 @@
         document.querySelector(".taskAddingPanel__input").focus();
     };
 
-    const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+    const removeTask = (removedIndex) => {
+        const tasksWithoutRemovedTask = [
+            ...tasks.slice(0, removedIndex),
+            ...tasks.slice(removedIndex + 1),
+        ];
+        tasks = tasksWithoutRemovedTask;
         render();
     };
 
@@ -51,7 +58,7 @@
         });
     };
 
-    const render = () => {
+    const renderTask = () => {
         let HTMLstring = "";
 
         for (const task of tasks) {
@@ -64,7 +71,22 @@
             `;
         }
         document.querySelector(".taskListToDoPanel__taskList").innerHTML = HTMLstring;
+    };
 
+    const renderAdditionalButtons = () => {
+        const buttonsContainer = document.querySelector(".taskListToDoPanel__buttonContainer")
+
+        if (tasks != "") {
+            buttonsContainer.innerHTML = ` 
+        <button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction">Oznacz wszystkie jako ukończone</button>
+        <button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction">Ukryj ukończone</button>`
+        };
+    }
+
+    const render = () => {
+
+        renderTask();
+        renderAdditionalButtons();
         bindsEvents();
 
     };
