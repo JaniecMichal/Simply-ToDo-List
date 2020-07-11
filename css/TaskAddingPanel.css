@@ -1,4 +1,4 @@
-.TaskAddingPanel {
+.taskAddingPanel {
     width: 100%;
     padding: 30px;
     background-color: white;
@@ -7,34 +7,34 @@
     margin-bottom: 30px;
 }
 
-.TaskAddingPanel__Header {
+.taskAddingPanel__header {
     border-bottom: 2px solid #555;
     margin-bottom: 40px;
 }
 
-.TaskAddingPanel__headerTitle {
+.taskAddingPanel__headerTitle {
     font-weight: 400;
 }
 
-.TaskAddingPanel_Form {
+.taskAddingPanel__form {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
 
-.TaskAddingPanel_Input {
+.taskAddingPanel__input {
     padding: 10px;
     flex-basis: 75%;
     flex-grow: 1;
     border: 2px solid #555;
 }
 
-.TaskAddingPanel_Input:focus {
+.taskAddingPanel_input:focus {
     outline: 4px solid teal;
 }
 
-.TaskAddingPanel__AddTaskButton {
+.taskAddingPanel__addTaskButton {
     margin-left: 5px;
     flex-basis: 20%;
     flex-grow: 1;
@@ -42,31 +42,33 @@
     color: white;
     padding: 10px;
     border: 2px solid #555;
+    transition: 1s;
 }
 
-.TaskAddingPanel__AddTaskButton:hover {
+.taskAddingPanel__addTaskButton:hover {
     background-color: hsl(180, 100%, 33%);
     color: black;
     cursor: pointer;
     border-color: #222;
+    transform: scale(1.2);
 }
 
-.TaskAddingPanel__AddTaskButton:active {
+.taskAddingPanel__addTaskButton:active {
     background-color: hsl(180, 100%, 43%);
 }
 
 @media (max-width:480px) {
-    .TaskAddingPanel_Form {
+    .taskAddingPanel_form {
         display: flex;
         flex-flow: column;
         justify-content: center;
         align-items: center;
     }
-    .TaskAddingPanel_Input {
+    .taskAddingPanel_input {
         width: 100%;
     }
-    .TaskAddingPanel__AddTaskButton {
+    .taskAddingPanel__addTaskButton {
         width: 100%;
-        margin-top:10px;
+        margin-top: 10px;
     }
 }

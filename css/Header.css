@@ -1,10 +1,10 @@
-.Header {
+.header {
     padding: 5px;
     width: 100%;
     text-align: center;
 }
 
-.Header__title {
+.header__title {
     font-weight: 700;
     font-size: 35px;
 }

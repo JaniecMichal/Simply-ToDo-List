@@ -1,4 +1,4 @@
-.Footer {
+.footer {
     width: 100%;
     padding: 30px;
     background-color: white;
@@ -6,23 +6,23 @@
     box-shadow: 2px 2px 4px 3px #999;
 }
 
-.Footer__footerText {
+.footer__footerText {
     text-align: center;
     border-bottom: 2px solid #555;
 }
 
-.Footer__link {
+.footer__link {
     text-decoration: none;
     color: grey;
 }
 
-.Footer__titleSource {
+.footer__titleSource {
     color: grey;
     font-weight: 400;
     margin-bottom: 0px;
 }
 
-.Footer__Sources {
+.footer__sources {
     color: grey;
     margin-top: 0px;
 }

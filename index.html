@@ -23,52 +23,55 @@
 <body class="body">
 
 
-    <main class="Container">
-        <header class="Header">
-            <h1 class="Header__title">ToDO list by {Imperator}</h1>
+    <main class="container">
+        <header class="header">
+            <h1 class="header__title">ToDO list by {Imperator}</h1>
         </header>
 
-        <section class="TaskAddingPanel">
+        <section class="taskAddingPanel">
 
-            <header class="TaskAddingPanel__Header">
-                <h2 class="TaskAddingPanel__headerTitle">Co mamy do zrobienia?</h2>
+            <header class="taskAddingPanel__header">
+                <h2 class="taskAddingPanel__headerTitle">Co mamy do zrobienia?</h2>
             </header>
 
-            <form class="TaskAddingPanel_Form js-form">
-                <input id="AddTaskInput" class="TaskAddingPanel_Input" placeholder="Wpisz zadanie do wykonania"
-                    autofocus><button for="AddTaskInput" class="TaskAddingPanel__AddTaskButton js-addNewTask">Dodaj
+            <form class="taskAddingPanel__form js-form">
+                <input id="AddTaskInput" class="taskAddingPanel__input" placeholder="Wpisz zadanie do wykonania"
+                    autofocus><button class="taskAddingPanel__addTaskButton js-addNewTask">Dodaj
                     zadanie</button>
             </form>
 
         </section>
 
-        <section class="TaskListToDoPanel">
+        <section class="taskListToDoPanel">
 
-            <header class="TaskListToDoPanel__Header">
-                <h2 class="TaskListToDoPanel__headerTitle">Lista zadań do zrobienia:</h2>
+            <header class="taskListToDoPanel__header">
+                <h2 class="taskListToDoPanel__headerTitle">Lista zadań do zrobienia:</h2>
             </header>
+            <button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction">Oznacz wszystkie jako
+                ukończone</button>
+            <button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction">Ukryj ukończone</button>
 
-            <ul class="TaskListToDoPanel__TaskList">
+            <ul class="taskListToDoPanel__taskList">
 
             </ul>
 
         </section>
 
-        <footer class="Footer">
-            <h3 class="Footer__footerText">Wszelkie prawa zastrzeżone.&copy; ToDo List by {Imperator}. Projekt 2020.
+        <footer class="footer">
+            <h3 class="footer__footerText">Wszelkie prawa zastrzeżone.&copy; ToDo List by {Imperator}. Projekt 2020.
             </h3>
-            <h4 class="Footer__titleSource">Źródła</h4>
-            <div class="Footer__Sources">Icons made by <a href="https://www.flaticon.com/authors/freepik"
-                    title="Freepik" class="Footer__link" target="_blank" rel="noreferrer noopener">Freepik</a> from <a
-                    href="https://www.flaticon.com/" title="Flaticon" class="Footer__link"
+            <h4 class="footer__titleSource">Źródła</h4>
+            <div class="footer__sources">Icons made by <a href="https://www.flaticon.com/authors/freepik"
+                    title="Freepik" class="footer__link" target="_blank" rel="noreferrer noopener">Freepik</a> from <a
+                    href="https://www.flaticon.com/" title="Flaticon" class="footer__link"
                     rel="noreferrer noopener">www.flaticon.com</a></div>
-            <div class="Footer__Sources">Icons made by <a href="https://freeicons.io/profile/3277"
-                    title="Gayrat Muminov" class="Footer__link" target="_blank" rel="noreferrer noopener">Gayrat
-                    Muminov</a> from <a href="https://freeicons.io/" title="Flaticon" class="Footer__link"
+            <div class="footer__sources">Icons made by <a href="https://freeicons.io/profile/3277"
+                    title="Gayrat Muminov" class="footer__link" target="_blank" rel="noreferrer noopener">Gayrat
+                    Muminov</a> from <a href="https://freeicons.io/" title="Flaticon" class="footer__link"
                     rel="noreferrer noopener">www.flaticon.com</a></div>
-            <div class="Footer__Sources">Icons made by <a href="https://freeicons.io/profile/714" title="Raj Dev"
-                    class="Footer__link" target="_blank" rel="noreferrer noopener">Raj Dev</a> from <a
-                    href="https://freeicons.io/" title="Flaticon" class="Footer__link"
+            <div class="footer__sources">Icons made by <a href="https://freeicons.io/profile/714" title="Raj Dev"
+                    class="footer__link" target="_blank" rel="noreferrer noopener">Raj Dev</a> from <a
+                    href="https://freeicons.io/" title="Flaticon" class="footer__link"
                     rel="noreferrer noopener">www.flaticon.com</a></div>
         </footer>
     </main>

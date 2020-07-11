@@ -1,4 +1,4 @@
-.TaskListToDoPanel {
+.taskListToDoPanel {
     width: 100%;
     padding: 30px;
     background-color: white;
@@ -7,20 +7,20 @@
     margin-bottom: 30px;
 }
 
-.TaskListToDoPanel__Header {
+.taskListToDoPanel__header {
     border-bottom: 2px solid #555;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
-.TaskListToDoPanel__headerTitle {
+.taskListToDoPanel__headerTitle {
     font-weight: 400;
 }
 
-.TaskListToDoPanel__TaskList {
+.taskListToDoPanel__taskList {
     padding-left: 0px;
 }
 
-.TaskListToDoPanel__ListItem {
+.taskListToDoPanel__listItem {
     list-style-type: none;
     border-bottom: 2px solid #555;
     display: flex;
@@ -29,25 +29,26 @@
     align-items: center;
 }
 
-.TaskListToDoPanel__Task {
+.taskListToDoPanel__task {
     flex-basis: 78%;
     margin-left: 10px;
-    font-size:20px;
+    font-size: 20px;
 }
 
-.TaskListToDoPanel__Task--done {
+.taskListToDoPanel__task--done {
     text-decoration: line-through;
 }
 
-.TaskListToDoPanel__Button {
+.taskListToDoPanel__button {
     min-height: 30px;
     flex-basis: 10%;
-    background-color: #008000;
+    background-color: hsl(120, 100%, 25%);
     border: 2px solid #555;
     color: white;
+    transition: background-color 1s;
 }
 
-.TaskListToDoPanel__Button:hover {
+.taskListToDoPanel__button:hover {
     background-color: hsl(120, 100%, 35%);
     border-color: #222;
     cursor: pointer;
@@ -56,24 +57,24 @@
     background-repeat: no-repeat;
 }
 
-.TaskListToDoPanel__Button--done {
+.taskListToDoPanel__button--done {
     background-image: url(../images/checked--small.png);
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.TaskListToDoPanel__Button:active {
+.taskListToDoPanel__button:active {
     background-color: hsl(120, 100%, 50%);
 }
 
-.TaskListToDoPanel__Button--remove {
+.taskListToDoPanel__button--remove {
     background-color: darkred;
     background-image: url(../images/basket.png);
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.TaskListToDoPanel__Button--remove:hover {
+.taskListToDoPanel__button--remove:hover {
     background-color: hsl(0, 100%, 35%);
     border-color: #222;
     background-image: url(../images/basket.png);
@@ -81,24 +82,40 @@
     background-repeat: no-repeat;
 }
 
-.TaskListToDoPanel__Button--remove:active {
+.taskListToDoPanel__button--remove:active {
     background-color: hsl(0, 100%, 45%);
 }
 
+.taskListToDoPanel__button--additionalAction {
+    background-color: teal;
+    background-image: none;
+
+}
+.taskListToDoPanel__button--additionalAction:hover {
+    background-color: hsl(120, 100%, 25%);
+    background-image: none;
+
+}
+.taskListToDoPanel__button--additionalAction:active {
+    background-color: hsl(120, 100%, 35%);
+}
+
+.taskListToDoPanel__button--hideDone {}
+
 @media (max-width:635px) {
-    .TaskListToDoPanel__ListItem {
+    .taskListToDoPanel__listItem {
         padding: 20px 0px;
         border-bottom: 2px solid #555;
     }
-    .TaskListToDoPanel__Task {
+    .taskListToDoPanel__task {
         flex-grow: 1;
         text-align: center;
     }
-    .TaskListToDoPanel__Button {
+    .taskListToDoPanel__button {
         flex-basis: 100%;
         flex-grow: 1;
     }
-    .TaskListToDoPanel__Button--remove {
+    .taskListToDoPanel__button--remove {
         flex-grow: 1;
     }
 }
