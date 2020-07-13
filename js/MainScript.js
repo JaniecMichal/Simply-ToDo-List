@@ -4,12 +4,10 @@
     ];
 
     const addNewTask = (newTaskContainer) => {
-        const updatesTasks = [
+        tasks = [
             ...tasks,
             { content: newTaskContainer, done: false },
         ];
-
-        tasks = updatesTasks;
 
         render();
         taskInputCleaning();
@@ -25,16 +23,29 @@
     };
 
     const removeTask = (removedIndex) => {
-        const tasksWithoutRemovedTask = [
+        tasks = [
             ...tasks.slice(0, removedIndex),
             ...tasks.slice(removedIndex + 1),
         ];
-        tasks = tasksWithoutRemovedTask;
+
         render();
     };
 
-    const toggleDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done
+    const toggleDone = (editedTaskIndex) => {
+        tasks = [
+            ...tasks.slice(0, editedTaskIndex),
+            { ...tasks[editedTaskIndex], done: !tasks[editedTaskIndex].done },
+            ...tasks.slice(editedTaskIndex + 1),
+        ];
+        render();
+    };
+
+    const markAllDone = () => {
+        if (tasks.length > 0) {
+            tasks = tasks.map(task => ({
+                ...task, done: true,
+            }));
+        }
         render();
     };
 
@@ -76,18 +87,32 @@
     const renderAdditionalButtons = () => {
         const buttonsContainer = document.querySelector(".taskListToDoPanel__buttonContainer")
 
-        if (tasks != "") {
+        if (tasks.length > 0) {
             buttonsContainer.innerHTML = ` 
-        <button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction">Oznacz wszystkie jako ukończone</button>
-        <button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction">Ukryj ukończone</button>`
-        };
+        <button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction js-allDoneButton">Oznacz wszystkie jako ukończone</button>
+        <button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction js-hideDoneTask">Ukryj ukończone</button>`
+        }
+        else {
+            buttonsContainer.innerHTML = "";
+        }
     }
+
+    const bindsAdditionalEvents = () => {
+        if (tasks.length > 0) {
+            const allDonebutton = document.querySelector(".js-allDoneButton");
+            allDonebutton.addEventListener("click", markAllDone);
+        };
+
+
+    };
 
     const render = () => {
 
         renderTask();
         renderAdditionalButtons();
         bindsEvents();
+        bindsAdditionalEvents();
+
 
     };
 

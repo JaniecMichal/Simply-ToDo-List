@@ -89,17 +89,22 @@
 .taskListToDoPanel__button--additionalAction {
     background-color: teal;
     background-image: none;
-
 }
+
+.taskListToDoPanel__button--disabled {
+    background-color: grey;
+    background-image: none;
+    cursor: default;
+}
+
 .taskListToDoPanel__button--additionalAction:hover {
     background-color: hsl(120, 100%, 25%);
     background-image: none;
-    
 }
+
 .taskListToDoPanel__button--additionalAction:active {
     background-color: hsl(120, 100%, 35%);
 }
-
 
 @media (max-width:635px) {
     .taskListToDoPanel__listItem {
