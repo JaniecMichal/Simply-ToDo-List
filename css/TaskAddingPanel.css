@@ -30,7 +30,7 @@
     border: 2px solid #555;
 }
 
-.taskAddingPanel_input:focus {
+.taskAddingPanel__input:focus {
     outline: 4px solid teal;
 }
 
@@ -50,12 +50,12 @@
     color: black;
     cursor: pointer;
     border-color: #222;
-    transform: scale(1.2);
+    transform: scale(1.12);
 }
 
 .taskAddingPanel__addTaskButton:active {
-    background-color: hsl(180, 100%, 43%);
-}
+    background-color: hsl(180, 100%,43%);
+} 
 
 @media (max-width:480px) {
     .taskAddingPanel_form {

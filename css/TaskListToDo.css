@@ -29,6 +29,10 @@
     align-items: center;
 }
 
+.taskListToDoPanel__listItem--hidden {
+    display: none;
+}
+
 .taskListToDoPanel__task {
     flex-basis: 78%;
     margin-left: 10px;
@@ -75,7 +79,7 @@
 }
 
 .taskListToDoPanel__button--remove:hover {
-    background-color: hsl(0, 100%, 35%);
+    background-color: hsl(0, 100%, 38%);
     border-color: #222;
     background-image: url(../images/basket.png);
     background-position: center;
@@ -86,15 +90,19 @@
     background-color: hsl(0, 100%, 45%);
 }
 
-.taskListToDoPanel__button--additionalAction {
-    background-color: teal;
-    background-image: none;
+.taskListToDoPanel__buttonContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.taskListToDoPanel__button--disabled {
-    background-color: grey;
+.taskListToDoPanel__button--additionalAction {
+    flex-basis: auto;
+    margin-left: 10px;
+    background-color: teal;
     background-image: none;
-    cursor: default;
+    padding: 10px;
 }
 
 .taskListToDoPanel__button--additionalAction:hover {
@@ -106,20 +114,79 @@
     background-color: hsl(120, 100%, 35%);
 }
 
-@media (max-width:635px) {
+.taskListToDoPanel__button--allRemove {
+    flex-basis: auto;
+    background-color: darkred;
+    background-image: none;
+    flex-basis: auto;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.taskListToDoPanel__button--allRemove:hover {
+    background-color: hsl(0, 100%, 38%);
+    border-color: #222;
+    background-image: none;
+}
+
+.taskListToDoPanel__button--allRemove:active {
+    background-color: hsl(0, 100%, 45%);
+}
+
+.taskListToDoPanel__button--disabled {
+    background-color: grey;
+    background-image: none;
+    border-color: grey;
+}
+
+.taskListToDoPanel__button--disabled:hover {
+    background-color: grey;
+    background-image: none;
+    cursor: default;
+    border-color: grey;
+}
+
+.taskListToDoPanel__button--disabled:active {
+    outline: none;
+}
+
+@media (max-width:790px) {
     .taskListToDoPanel__listItem {
         padding: 20px 0px;
         border-bottom: 2px solid #555;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
     }
     .taskListToDoPanel__task {
-        flex-grow: 1;
         text-align: center;
     }
     .taskListToDoPanel__button {
-        flex-basis: 100%;
-        flex-grow: 1;
+        min-width: 20%;
     }
     .taskListToDoPanel__button--remove {
-        flex-grow: 1;
+        min-width: 20%;
+    }
+    .taskListToDoPanel__buttonContainer {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .taskListToDoPanel__button--additionalAction {
+        flex-basis: auto;
+        margin-top: 10px;
+        background-color: teal;
+        background-image: none;
+        padding: 10px;
+    }
+    .taskListToDoPanel__button--allRemove {
+        flex-basis: auto;
+        background-color: darkred;
+        background-image: none;
+        flex-basis: auto;
+        padding: 10px;
+        margin-top: 10px;
     }
 }
