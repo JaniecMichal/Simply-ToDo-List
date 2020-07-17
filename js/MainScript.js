@@ -81,6 +81,7 @@
 
     const removeAllTasks = () => {
         tasks = [];
+        checkingQuantityDoneTask();
         render();
     };
 
