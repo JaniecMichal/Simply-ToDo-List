@@ -12,6 +12,7 @@ Demo --> [ToDO List by {Imperator}](https://janiecmichal.github.io/Simply-ToDo-L
 - CSS
 - BEM convention
 - Vanilla.JS (ES6)
+- Imutabillity added to JS
 
 ## How to use?
 1. Write task into text input and submit by button.
