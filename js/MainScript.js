@@ -87,10 +87,17 @@
 
     const renderTask = () => {
         const tasksToHTML = tasks.map(task => `
-        <li class="taskListToDoPanel__listItem ${hideDoneTask && task.done ? "taskListToDoPanel__listItem--hidden" : ""}"> <button class="taskListToDoPanel__button js-doneButton 
-        ${task.done ? "taskListToDoPanel__button--done" : ""}"></button>
-        <p class="taskListToDoPanel__task ${task.done ? "taskListToDoPanel__task--done" : ""}">${task.content}</p><button
-            class="taskListToDoPanel__button taskListToDoPanel__button--remove"></button>
+        <li 
+        class="taskListToDoPanel__listItem ${hideDoneTask && task.done ? "taskListToDoPanel__listItem--hidden" : ""}
+        "> 
+        <button class="taskListToDoPanel__button js-doneButton 
+        ${task.done ? "taskListToDoPanel__button--done" : ""}">
+        </button>
+        <p class="taskListToDoPanel__task 
+        ${task.done ? "taskListToDoPanel__task--done" : ""}">${task.content}
+        </p>
+        <button class="taskListToDoPanel__button taskListToDoPanel__button--remove">
+        </button>
          </li>`).join(" ");
 
         document.querySelector(".taskListToDoPanel__taskList").innerHTML = tasksToHTML;
@@ -101,10 +108,15 @@
 
         if (tasks.length > 0) {
             buttonsContainer.innerHTML =
-                `<button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction ${anyTasks ? "taskListToDoPanel__button--disabled disabled" : ""} js-allDoneButton">Oznacz wszystkie jako ukończone</button>
-        <button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction js-hideDoneTask">${hideDoneTask ? "Pokaż wykonane zadania" : "Ukryj wykonane zadania"}</button>
-        <button class="taskListToDoPanel__button taskListToDoPanel__button--allRemove">Usuń wszystkie
-        zadania</button>`
+                `<button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction js-allDoneButton" 
+            ${anyTasks ? "disabled" : ""}>
+            Oznacz wszystkie jako ukończone
+            </button>
+            <button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction js-hideDoneTask">
+            ${hideDoneTask ? "Pokaż wykonane zadania" : "Ukryj wykonane zadania"}</button>
+            <button class="taskListToDoPanel__button taskListToDoPanel__button--allRemove">
+            Usuń wszystkie zadania
+            </button>`
         }
         else {
             buttonsContainer.innerHTML = "";

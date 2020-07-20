@@ -133,16 +133,9 @@
     background-color: hsl(0, 100%, 45%);
 }
 
-.taskListToDoPanel__button--disabled {
+.taskListToDoPanel__button:disabled {
     background-color: grey;
     background-image: none;
-    border-color: grey;
-}
-
-.taskListToDoPanel__button--disabled:hover {
-    background-color: grey;
-    background-image: none;
-    cursor: default;
     border-color: grey;
 }
 
