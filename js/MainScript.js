@@ -1,11 +1,6 @@
 {
     let tasks = [];
     let hideDoneTask = false;
-    let anyTasks = false;
-
-    const checkingQuantityDoneTask = () => {
-        tasks.length === 0 ? anyTasks = false : "";
-    }
 
     const addNewTask = (newTaskContainer) => {
         tasks = [
@@ -31,7 +26,6 @@
             ...tasks.slice(0, removedIndex),
             ...tasks.slice(removedIndex + 1),
         ];
-        checkingQuantityDoneTask();
         render();
     };
 
@@ -50,7 +44,6 @@
                 ...task, done: true,
             }));
         }
-        anyTasks = true;
         render();
     };
 
@@ -81,7 +74,7 @@
 
     const removeAllTasks = () => {
         tasks = [];
-        checkingQuantityDoneTask();
+
         render();
     };
 
@@ -109,7 +102,7 @@
         if (tasks.length > 0) {
             buttonsContainer.innerHTML =
                 `<button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction js-allDoneButton" 
-            ${anyTasks ? "disabled" : ""}>
+            ${tasks.every(({ done }) => done) ? "disabled" : ""}>
             Oznacz wszystkie jako ukończone
             </button>
             <button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction js-hideDoneTask">
