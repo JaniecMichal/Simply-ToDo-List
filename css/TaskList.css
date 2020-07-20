@@ -1,26 +1,8 @@
-.taskListToDoPanel {
-    width: 100%;
-    padding: 30px;
-    background-color: white;
-    border: 2px solid #555;
-    box-shadow: 2px 2px 4px 3px #999;
-    margin-bottom: 30px;
-}
-
-.taskListToDoPanel__header {
-    border-bottom: 2px solid #555;
-    margin-bottom: 20px;
-}
-
-.taskListToDoPanel__headerTitle {
-    font-weight: 400;
-}
-
-.taskListToDoPanel__taskList {
+.taskList {
     padding-left: 0px;
 }
 
-.taskListToDoPanel__listItem {
+.taskList__listItem {
     list-style-type: none;
     border-bottom: 2px solid #555;
     display: flex;
@@ -29,21 +11,21 @@
     align-items: center;
 }
 
-.taskListToDoPanel__listItem--hidden {
+.taskList__listItem--hidden {
     display: none;
 }
 
-.taskListToDoPanel__task {
+.taskList__task {
     flex-basis: 78%;
     margin-left: 10px;
     font-size: 20px;
 }
 
-.taskListToDoPanel__task--done {
+.taskList__task--done {
     text-decoration: line-through;
 }
 
-.taskListToDoPanel__button {
+.taskList__button {
     min-height: 30px;
     flex-basis: 10%;
     background-color: hsl(120, 100%, 25%);
@@ -52,7 +34,7 @@
     transition: background-color 1s;
 }
 
-.taskListToDoPanel__button:hover {
+.taskList__button:hover {
     background-color: hsl(120, 100%, 35%);
     border-color: #222;
     cursor: pointer;
@@ -61,24 +43,24 @@
     background-repeat: no-repeat;
 }
 
-.taskListToDoPanel__button--done {
+.taskList__button--done {
     background-image: url(../images/checked--small.png);
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.taskListToDoPanel__button:active {
+.taskList__button:active {
     background-color: hsl(120, 100%, 50%);
 }
 
-.taskListToDoPanel__button--remove {
+.taskList__button--remove {
     background-color: darkred;
     background-image: url(../images/basket.png);
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.taskListToDoPanel__button--remove:hover {
+.taskList__button--remove:hover {
     background-color: hsl(0, 100%, 38%);
     border-color: #222;
     background-image: url(../images/basket.png);
@@ -86,35 +68,35 @@
     background-repeat: no-repeat;
 }
 
-.taskListToDoPanel__button--remove:active {
+.taskList__button--remove:active {
     background-color: hsl(0, 100%, 45%);
 }
 
-.taskListToDoPanel__buttonContainer {
+.buttonContainer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
 }
 
-.taskListToDoPanel__button--additionalAction {
-    flex-basis: auto;
+.taskList__button--additionalAction {
+    flex-basis: 250px;
     margin-left: 10px;
     background-color: teal;
     background-image: none;
     padding: 10px;
 }
 
-.taskListToDoPanel__button--additionalAction:hover {
+.taskList__button--additionalAction:hover {
     background-color: hsl(120, 100%, 25%);
     background-image: none;
 }
 
-.taskListToDoPanel__button--additionalAction:active {
+.taskList__button--additionalAction:active {
     background-color: hsl(120, 100%, 35%);
 }
 
-.taskListToDoPanel__button--allRemove {
+.taskList__button--allRemove {
     flex-basis: auto;
     background-color: darkred;
     background-image: none;
@@ -123,28 +105,28 @@
     margin-left: 10px;
 }
 
-.taskListToDoPanel__button--allRemove:hover {
+.taskList__button--allRemove:hover {
     background-color: hsl(0, 100%, 38%);
     border-color: #222;
     background-image: none;
 }
 
-.taskListToDoPanel__button--allRemove:active {
+.taskList__button--allRemove:active {
     background-color: hsl(0, 100%, 45%);
 }
 
-.taskListToDoPanel__button:disabled {
+.taskList__button:disabled {
     background-color: grey;
     background-image: none;
     border-color: grey;
 }
 
-.taskListToDoPanel__button--disabled:active {
+.taskList__button--disabled:active {
     outline: none;
 }
 
 @media (max-width:790px) {
-    .taskListToDoPanel__listItem {
+    .taskList__listItem {
         padding: 20px 0px;
         border-bottom: 2px solid #555;
         display: flex;
@@ -152,29 +134,29 @@
         justify-content: center;
         align-items: center;
     }
-    .taskListToDoPanel__task {
+    .taskList__task {
         text-align: center;
     }
-    .taskListToDoPanel__button {
+    .taskList__button {
         min-width: 20%;
     }
-    .taskListToDoPanel__button--remove {
+    .taskList__button--remove {
         min-width: 20%;
     }
-    .taskListToDoPanel__buttonContainer {
+    .buttonContainer {
         display: flex;
         flex-flow: column;
         justify-content: flex-end;
         align-items: center;
     }
-    .taskListToDoPanel__button--additionalAction {
+    .taskList__button--additionalAction {
         flex-basis: auto;
         margin-top: 10px;
         background-color: teal;
         background-image: none;
         padding: 10px;
     }
-    .taskListToDoPanel__button--allRemove {
+    .taskList__button--allRemove {
         flex-basis: auto;
         background-color: darkred;
         background-image: none;

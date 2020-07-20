@@ -14,11 +14,11 @@
     };
 
     const taskInputCleaning = () => {
-        document.querySelector(".taskAddingPanel__input").value = "";
+        document.querySelector(".form__input").value = "";
     };
 
     const taskInputFocus = () => {
-        document.querySelector(".taskAddingPanel__input").focus();
+        document.querySelector(".form__input").focus();
     };
 
     const removeTask = (removedIndex) => {
@@ -53,7 +53,7 @@
     }
 
     const bindsRemoveEvent = () => {
-        const removeButtons = document.querySelectorAll(".taskListToDoPanel__button--remove");
+        const removeButtons = document.querySelectorAll(".taskList__button--remove");
 
         removeButtons.forEach((removeButton, index) => {
             removeButton.addEventListener("click", () => {
@@ -81,33 +81,33 @@
     const renderTask = () => {
         const tasksToHTML = tasks.map(task => `
         <li 
-        class="taskListToDoPanel__listItem ${hideDoneTask && task.done ? "taskListToDoPanel__listItem--hidden" : ""}
+        class="taskList__listItem ${hideDoneTask && task.done ? "taskList__listItem--hidden" : ""}
         "> 
-        <button class="taskListToDoPanel__button js-doneButton 
-        ${task.done ? "taskListToDoPanel__button--done" : ""}">
+        <button class="taskList__button js-doneButton 
+        ${task.done ? "taskList__button--done" : ""}">
         </button>
-        <p class="taskListToDoPanel__task 
-        ${task.done ? "taskListToDoPanel__task--done" : ""}">${task.content}
+        <p class="taskList__task 
+        ${task.done ? "taskList__task--done" : ""}">${task.content}
         </p>
-        <button class="taskListToDoPanel__button taskListToDoPanel__button--remove">
+        <button class="taskList__button taskList__button--remove">
         </button>
          </li>`).join(" ");
 
-        document.querySelector(".taskListToDoPanel__taskList").innerHTML = tasksToHTML;
+        document.querySelector(".taskList").innerHTML = tasksToHTML;
     };
 
     const renderAdditionalButtons = () => {
-        const buttonsContainer = document.querySelector(".taskListToDoPanel__buttonContainer")
+        const buttonsContainer = document.querySelector(".buttonContainer")
 
         if (tasks.length > 0) {
             buttonsContainer.innerHTML =
-                `<button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction js-allDoneButton" 
+                `<button class="taskList__button taskList__button--additionalAction js-allDoneButton" 
             ${tasks.every(({ done }) => done) ? "disabled" : ""}>
             Oznacz wszystkie jako ukończone
             </button>
-            <button class="taskListToDoPanel__button taskListToDoPanel__button--additionalAction js-hideDoneTask">
+            <button class="taskList__button taskList__button--additionalAction js-hideDoneTask">
             ${hideDoneTask ? "Pokaż wykonane zadania" : "Ukryj wykonane zadania"}</button>
-            <button class="taskListToDoPanel__button taskListToDoPanel__button--allRemove">
+            <button class="taskList__button taskList__button--allRemove">
             Usuń wszystkie zadania
             </button>`
         }
@@ -132,7 +132,7 @@
 
     const bindsRemoveAllEvent = () => {
         if (tasks.length > 0) {
-            const removeAllTaskButton = document.querySelector(".taskListToDoPanel__button--allRemove");
+            const removeAllTaskButton = document.querySelector(".taskList__button--allRemove");
             removeAllTaskButton.addEventListener("click", removeAllTasks);
         };
     };
@@ -150,7 +150,7 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        const newTaskContainer = document.querySelector(".taskAddingPanel__input").value.trim();
+        const newTaskContainer = document.querySelector(".form__input").value.trim();
 
         if (newTaskContainer === "") {
             return taskInputFocus();

@@ -1,40 +1,22 @@
-.taskAddingPanel {
-    width: 100%;
-    padding: 30px;
-    background-color: white;
-    border: 2px solid #555;
-    box-shadow: 2px 2px 4px 3px #999;
-    margin-bottom: 30px;
-}
-
-.taskAddingPanel__header {
-    border-bottom: 2px solid #555;
-    margin-bottom: 40px;
-}
-
-.taskAddingPanel__headerTitle {
-    font-weight: 400;
-}
-
-.taskAddingPanel__form {
+.form {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
 
-.taskAddingPanel__input {
+.form__input {
     padding: 10px;
     flex-basis: 75%;
     flex-grow: 1;
     border: 2px solid #555;
 }
 
-.taskAddingPanel__input:focus {
+.form__input:focus {
     outline: 4px solid teal;
 }
 
-.taskAddingPanel__addTaskButton {
+.form__addTaskButton {
     margin-left: 5px;
     flex-basis: 20%;
     flex-grow: 1;
@@ -45,7 +27,7 @@
     transition: 1s;
 }
 
-.taskAddingPanel__addTaskButton:hover {
+.form__addTaskButton:hover {
     background-color: hsl(180, 100%, 33%);
     color: black;
     cursor: pointer;
@@ -53,9 +35,9 @@
     transform: scale(1.12);
 }
 
-.taskAddingPanel__addTaskButton:active {
-    background-color: hsl(180, 100%,43%);
-} 
+.form__addTaskButton:active {
+    background-color: hsl(180, 100%, 43%);
+}
 
 @media (max-width:480px) {
     .taskAddingPanel_form {

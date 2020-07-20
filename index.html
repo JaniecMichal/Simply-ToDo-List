@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="css/mainStyle.css" />
     <link rel="stylesheet" href="css/Container.css" />
     <link rel="stylesheet" href="css/Header.css" />
-    <link rel="stylesheet" href="css/TaskAddingPanel.css" />
-    <link rel="stylesheet" href="css/TaskListToDo.css" />
+    <link rel="stylesheet" href="css/Section.css" />
+    <link rel="stylesheet" href="css/Form.css" />
+    <link rel="stylesheet" href="css/TaskList.css" />
     <link rel="stylesheet" href="css/Footer.css" />
     <script defer src="js/MainScript.js"></script>
 </head>
@@ -28,32 +29,31 @@
             <h1 class="header__title">ToDO list by {Imperator}</h1>
         </header>
 
-        <section class="taskAddingPanel">
+        <section class="section">
 
-            <header class="taskAddingPanel__header">
-                <h2 class="taskAddingPanel__headerTitle">Co mamy do zrobienia?</h2>
+            <header class="section__header">
+                <h2 class="section__headerTitle">Co mamy do zrobienia?</h2>
             </header>
 
-            <form class="taskAddingPanel__form js-form">
-                <input id="AddTaskInput" class="taskAddingPanel__input" placeholder="Wpisz zadanie do wykonania"
-                    autofocus><button class="taskAddingPanel__addTaskButton js-addNewTask">Dodaj
+            <form class="form js-form">
+                <input class="form__input" placeholder="Wpisz zadanie do wykonania" autofocus><button
+                    class="form__addTaskButton js-addNewTask">Dodaj
                     zadanie</button>
             </form>
 
         </section>
 
-        <section class="taskListToDoPanel">
+        <section class="section">
 
-            <header class="taskListToDoPanel__header">
-                <h2 class="taskListToDoPanel__headerTitle">Lista zadań do zrobienia:</h2>
+            <header class="section__header">
+                <h2 class="section__headerTitle">Lista zadań do zrobienia:</h2>
 
             </header>
-            <div class="taskListToDoPanel__buttonContainer">
-
+            <div class="buttonContainer">
             </div>
 
 
-            <ul class="taskListToDoPanel__taskList">
+            <ul class="taskList">
 
             </ul>
 
